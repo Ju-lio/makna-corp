@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+:root {
+   --fontColor: #b61520;
+   --fontColor-opc: #B4141F1F;
+   --fontColor-hover: #EC1818;
+   --fontColor-selection: #ff9595;
+
+
+   --mainColor1: #12151C;
+   --mainColor2: #191D26;
+   --mainColor3: #1B222C;
+
+   --othrColor1: #531516;
+   --othrColor2: #661B1C;
+
+   --fontVamp: 'Berkshire Swash', cursive;
+   --fontBubble: 'Fredoka One', cursive;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none;
+   list-style: none;
+
+   font-family: var(--fontVamp);
+
+   color: var(--fontColor);
+}
+
+*::selection {
+   background-color: var(--fontColor-selection);
+   color: white;
+}
+
+body {
+   background-color: var(--mainColor3);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* $$$$$ HEADER $$$$$ */
+
+header {
+   display: block;
+   position: relative;
+   background-color: var(--mainColor1);
+   width: 100vw;
+}
+
+header svg {
+   position: absolute;
+   left: 20px;
+   top: calc(50% - 20px);
+   width: 20px;
+   fill: var(--fontColor);
+}
+
+header svg:hover {
+   fill: var(--fontColor-hover);
+   cursor: pointer;
+}
+
+header ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header ul li {
+   width: 150px;
+   padding: 23px 0 15px;
+   text-align: center;
+   border-bottom: 8px solid transparent;
+}
+
+header ul li:hover {
+   background-color: var(--fontColor-opc);
+   /* border-color: var(--fontColor-hover);; */
+   color: var(--fontColor-hover);;
+   cursor: pointer;
+}
+
+.menuSelected {
+   border-color: var(--fontColor-hover);;
+   color: var(--fontColor-hover);;
+   cursor: grab;
+}
+
+/* $$$$$ CONTEUDO $$$$$ */
+
+.mainContent {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 10pt;
+}
+
+.mainContent > svg {
+   margin: 25px 0;
+   fill: var(--mainColor2);
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--mainColor1);
+   padding: 15px 50px 50px;
+}
+
+.discografia {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-bottom: 50px;
+}
+
+.discografia img {
+   width: 400px;
+   height: 400px;
+}
+
+.disco {
+   width: 400px;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 25px;
+}
+
+.disco h1, .disco h2 {
+   font-family: var(--fontBubble);
+   color: white;
+}
+
+
+
+/* $$$$$ TEXT $$$$$ */
+
+.content .text {
+   display: flex;
+}
+
+.content h1 {
+   margin: 15px 0;
+   font-size: 30pt;
+}
+
+.content h2 {
+   font-family: 'Open Sans',Arial,sans-serif;
+   font-size: 14pt;
+   width: 80%;
+}
+
+.text > svg {
+   width: 70px;
+   margin-left: auto;
+   fill: var(--mainColor2);
+}
