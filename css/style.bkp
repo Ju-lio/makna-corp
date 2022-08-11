@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&display=swap');
+
+:root {
+   --fontColor: #b61520;
+   --fontColor-opc: #B4141F1F;
+   --fontColor-hover: #EC1818;
+   --fontColor-selection: #ff9595;
+   --fontColor-light: #8c8f94;
+   --fontColor-light2: #474e57;
+   --fontColor-light3: #393e46;
+
+
+   --mainColor1: #12151C;
+   --mainColor2: #191D26;
+   --mainColor3: #1B222C;
+
+   --othrColor1: #531516;
+   --othrColor2: #661B1C;
+
+   --fontPrimary:'Berkshire Swash', cursive;
+   --fontSecondary: 'Lora', serif;
+
+   --fontVamp: 'Berkshire Swash', cursive;
+   --fontBubble: 'Fredoka One', cursive;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none;
+   list-style: none;
+   color: var(--fontColor);
+}
+
+*::selection {
+   background-color: var(--fontColor-selection);
+   color: white;
+}
+
+body {
+   background-color: var(--mainColor3);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* $$$$$ HEADER $$$$$ */
+
+header {
+   display: block;
+   position: relative;
+   background-color: var(--mainColor1);
+   font-family: var(--fontPrimary);
+   font-size: 15pt;
+   width: 100vw;
+
+   position: fixed;
+   z-index: 999;
+}
+
+header svg {
+   position: absolute;
+   left: 20px;
+   top: calc(50% - 20px);
+   width: 20px;
+   fill: var(--fontColor);
+}
+
+header svg:hover {
+   fill: var(--fontColor-hover);
+   cursor: pointer;
+}
+
+header ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header ul li {
+   width: 150px;
+   padding: 23px 0 15px;
+   text-align: center;
+   border-bottom: 8px solid transparent;
+}
+
+header ul li:hover {
+   background-color: var(--fontColor-opc);
+   color: var(--fontColor-hover);
+   cursor: pointer;
+}
+
+.menuSelected, .menuSelected a {
+   border-color: var(--fontColor-hover);
+   color: var(--fontColor-hover);
+}
+
+/* $$$$$ CONTEUDO $$$$$ */
+
+.mainContent {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 10pt;
+}
+
+.mainContent > svg {
+   margin: 25px 0;
+   fill: var(--mainColor2);
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--mainColor1);
+   padding: 15px 50px 50px;
+}
+
+.discografia {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: var(--fontSecondary);
+   font-weight: bold;
+   margin-bottom: 50px;
+   cursor: pointer;
+}
+
+.discografia .image .play {
+   position: absolute;
+   left: 50px;
+   top: 50px;
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background-image: radial-gradient(var(--fontColor-light3), transparent, transparent);
+   border: 5px solid var(--fontColor-hover);
+   display: none;
+}
+
+.image:hover .play{
+   display: inline;
+}
+
+.play::before {
+   content: '';
+   position: absolute;
+   top: calc(50% - 20px);
+   right: calc(50% - 20px);
+   border-bottom: 20px solid transparent;
+   border-top: 20px solid transparent;
+   border-left: 30px solid var(--fontColor-hover);
+}
+
+.discografia img {
+   width: 400px;
+   height: 400px;
+}
+
+.disco {
+   width: 400px;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 25px;
+}
+
+
+
+.disco h1 a{
+   display: flex;
+   align-items: center;
+   color: var(--fontColor-light);
+}
+
+.disco h1:hover {
+   font-size: 25pt;
+   cursor: pointer;
+   color: var(--fontColor-light);
+}
+
+.disco span {
+   display: none;
+   margin-left: 10px;
+   color: var(--fontColor-light2);
+}
+
+.disco h1:hover span {
+   display: inline;
+   font-size: 22pt;
+}
+
+.disco h2 {
+   color: var(--fontColor-light2);
+}
+
+.disco h3 {
+   font-size: 10pt;
+   color: var(--fontColor-light3);
+}
+
+
+/* $$$$$ TEXT $$$$$ */
+
+.content .text {
+   display: flex;
+}
+
+.content h1 {
+   margin: 15px 0;
+   font-size: 30pt;
+}
+
+.content h2 {
+   font-family: 'Open Sans',Arial,sans-serif;
+   font-size: 14pt;
+   width: 80%;
+}
+
+.text > svg {
+   width: 70px;
+   margin-left: auto;
+   fill: var(--mainColor2);
+}
