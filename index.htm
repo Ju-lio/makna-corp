@@ -6,11 +6,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
    <link rel="stylesheet" href="css/style.css">
+   <script src="js/scripts.js"></script>
    <title>Makna Corp</title>
 </head>
 <body>
    <header>
-      <svg viewBox="0 0 2956 6147" preserveAspectRatio="xMidYMid meet">
+      <input type="checkbox" id="roboto">
+      <svg id="robotoIco" viewBox="0 0 2956 6147" preserveAspectRatio="xMidYMid meet">
          <g transform="translate(0,6147) scale(0.1,-0.1)" stroke="none">
             <path d="M7002 57573 l3 -3888 7775 0 7775 0 3 3888 2 3887 -7780 0 -7780 0 2-3887z"></path>
             <path d="M3890 57570 l0 -2330 775 0 775 0 0 2330 0 2330 -775 0 -775 0 0-2330z"></path>
@@ -45,9 +47,9 @@
          DISCOGRAFIA
       </h1>
 
-      <div class="discografia">
-         <div id="bubblegunImg" class="image imageOpen">
-            <div class="capa" style="background-image: url('img/bubblegun.png');" onclick="abreFaixas('bubblegunImg','bubblegunFaixas')"></div>   
+      <div id="bubblegunDisco" class="discografia">
+         <div class="image imageOpen">
+            <div class="capa" style="background-image: url('img/bubblegun.png');" onclick="setTracks('bubblegunDisco','bubblegun')"></div>   
          </div>
          <div id="bubblegunFaixas" class="disco" style="display: none">
             <h1> 
@@ -90,9 +92,9 @@
          </div>
       </div>
 
-      <div class="discografia">
-         <div id="8amImg" class="image imageOpen">
-            <div class="capa" style="background-image: url('img/8am.png');" onclick="abreFaixas('8amImg','8amFaixas')"></div>   
+      <div id="8amDisco" class="discografia">
+         <div class="image imageOpen">
+            <div class="capa" style="background-image: url('img/8am.png');" onclick="setTracks('8amDisco','oitoam')"></div>   
          </div>
          <div id="8amFaixas" class="disco" style="display: none">
             <h1> 
@@ -131,20 +133,4 @@
       </div>
    </div>
 </body>
-   <script>
-      function abreFaixas(id, faixas) {
-         var imagem = document.getElementById(id)
-         var faixas = document.getElementById(faixas)
-
-         if(faixas.style.display === 'none') {
-            imagem.classList.remove('imageOpen')
-            imagem.classList.add('imageClose')
-            faixas.style.display = 'flex'
-         } else {
-            imagem.classList.remove('imageClose')
-            imagem.classList.add('imageOpen')
-            faixas.style.display = 'none'
-         }
-      }
-   </script>
 </html>
