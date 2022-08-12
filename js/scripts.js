@@ -14,9 +14,7 @@ function setTracks(id,tema) {
       closeTracks(imagem,faixas)
    }
 
-   if(roboto.checked) {
-      changeTheme(tema)
-   }
+   changeTheme(tema)
 
    setTimeout(() => {disco.style.pointerEvents = 'all'}, 1000)
 }
