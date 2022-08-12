@@ -1,35 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
 
-   --fontColor: #b61520;
-   --fontColor-opc: #B4141F1F;
-   --fontColor-hover: #EC1818;
+   --fontColor: #ccc5c6;
+   --fontColor-opc: #b1b1b11f;
+   --fontColor-hover: #e7e7e7;
    --fontColor-hoverSecondary: #EC1818;
    --fontColor-selection: #ff9595;
    --fontColor-light: #929292;
    --fontColor-light2: #575757;
-   --fontColor-light3: #424242;
+   --fontColor-light3: #ccc5c6;
 
-   --mainColor1: #242424;
-   --mainColor2: #242424;
+   --mainColor1: #424242;
+   --mainColor2: #303030;
    --mainColor3: #1D1D1D;
 
-   --bodyColor: #1D1D1D;
-   --headerColor: #272727;
-   --fontHeaderColor: #b61520;
+   --bodyColor: #242424;
+   --headerColor: #424242;
+   --fontHeaderColor: #aaaaaa;
 
    --othrColor1: #531516;
    --othrColor2: #661B1C;
    --othrColor3: #350D0E;
 
-   --fontPrimary:'Berkshire Swash', cursive;
-   --fontSecondary: 'Permanent Marker' , cursive;
-   --fontBubble: 'Fredoka One', cursive;
+   --fontPrimary:   'Raleway', sans-serif;         
+   --fontSecondary: 'Raleway', sans-serif;           
+   --fontBubble:    'Raleway', sans-serif;        
 
    --timeAnimation: 0;
 }
@@ -119,6 +117,7 @@ header {
    color: var(--fontHeaderColor);
    font-size: 15pt;
    width: 100vw;
+   height: 70px;
 
    position: fixed;
    z-index: 999;
@@ -145,6 +144,7 @@ header ul {
    display: flex;
    justify-content: center;
    align-items: center;
+   height: 100%;
 }
 
 header ul li {
@@ -456,4 +456,171 @@ h1:hover span {
    width: 30px;
    margin-left: auto;
    fill: var(--mainColor2);
+}
+
+@media (max-width: 880px) {
+
+   header ul{
+      display: none;
+   }
+
+   header {
+      position: relative;
+      display: flex;
+      flex-direction: row-reverse;
+
+      align-items: center;
+   }
+
+   .menuMobile, .menuMobile::before, .menuMobile::after {
+      content: '';
+      width: 50px;
+      height: 8px;
+      background-color: var(--fontColor);
+      border-radius: 3px;
+   }
+
+   .menuMobile {
+      margin: 15px;
+   }
+
+   .menuMobile::before {
+      position: absolute;
+      top: 0;
+      margin-top: 15px;
+   }
+
+   .menuMobile::after {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 15px;
+   }
+
+   .pageTitle {
+      font-size: 22pt;
+      text-align: center;
+      padding: 50px 0;
+      margin-bottom: 50px;
+      color: var(--fontColor-light3);
+      background-color: var(--mainColor1);
+   }
+
+   .mainContent > svg {
+      margin: 25px 0 25px;
+      width: 75vw;
+   }
+
+   .discografia {
+      flex-direction: column;
+   }
+
+   .discografia .image{
+      width: 80vw;
+      height: 80vw;
+   }
+
+   .disco {
+      width: 80vw;
+      height: auto;
+      animation: animate-in 1s;
+   }
+   
+   @keyframes animate-in{
+      0% {
+         margin-top: -300px;
+      }
+      100% {
+         margin-top: 0;
+         height: auto;
+      }
+   }
+   
+   @keyframes animate-out {
+      0% {
+         margin-top: 0;
+         height: auto;
+      }
+      100% {
+         margin-top: -300px;
+         height: 50px;
+      }
+   }
+   
+   .disco h1 a {
+      display: flex;
+      align-items: center;
+   
+      height: 100%;
+      width: 100%;
+      padding: 10px 25px;
+      color: var(--fontColor-light);
+   }
+   
+   .disco h1 a:hover {
+      color: var(--fontColor-hover);
+   }
+   
+   h1:hover span {
+      color: var(--othrColor1);
+   }
+   
+   .disco li a h3 {
+      padding: 13px 0 0 30px;
+      font-size: 16pt;
+      color: var(--fontColor);
+   }
+   
+   .disco li a h4 {
+      padding: 0 0 13px 30px;
+      font-size: 9pt;
+      color: var(--fontColor-light2);
+   }
+   
+   .disco li:hover a h3 {
+      color: var(--fontColor-hover);
+   }
+   
+   .disco li:hover a h4 {
+      color: var(--fontColor);
+   }
+
+   .single {
+      background-color: var(--mainColor2);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+   }
+   
+   .single::before {
+      content: 'O';
+      font-size: 50pt;
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: var(--mainColor2) ;
+      border: 120px solid;
+      border-color: var(--mainColor1);
+      color: var(--mainColor1);
+      z-index: 1;
+   }
+   
+   .single:hover::before {
+      background-color: var(--othrColor1) ;
+      border: 120px solid var(--othrColor3);
+      color: var(--othrColor3);
+   }
+   
+   .single a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+   }
+   
 }
