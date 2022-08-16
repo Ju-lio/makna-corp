@@ -32,7 +32,37 @@
    --timeAnimation: 0;
 }
 
-.bubblegun:root {
+darkTema:root {
+
+   --fontColor: #ccc5c6;
+   --fontColor-opc: #b1b1b11f;
+   --fontColor-hover: #e7e7e7;
+   --fontColor-hoverSecondary: #EC1818;
+   --fontColor-selection: #ff9595;
+   --fontColor-light: #929292;
+   --fontColor-light2: #575757;
+   --fontColor-light3: #ccc5c6;
+
+   --mainColor1: #424242;
+   --mainColor2: #303030;
+   --mainColor3: #1D1D1D;
+
+   --bodyColor: #242424;
+   --headerColor: #424242;
+   --fontHeaderColor: #aaaaaa;
+
+   --othrColor1: #531516;
+   --othrColor2: #661B1C;
+   --othrColor3: #350D0E;
+
+   --fontPrimary:   'Raleway', sans-serif;         
+   --fontSecondary: 'Raleway', sans-serif;           
+   --fontBubble:    'Raleway', sans-serif;        
+
+   --timeAnimation: 0;
+}
+
+.oTernoTema:root {
 
    --fontColor: #B45389;
    --fontColor-opc: #ffc4f738;
@@ -58,7 +88,7 @@
    --othrColor3: #D399C4;
 }
 
-.oitoam:root {
+.culpaTema:root {
 
    --fontColor: #8647c2;
    --fontColor-opc: #7414b41f;
@@ -177,13 +207,52 @@ header ul li:hover {
    display: flex;
    flex-direction: column;
    align-items: center;
-   font-size: 10pt;
+   font-size: 9pt;
 }
 
 .mainContent > svg {
    margin: 100px 0 25px;
    fill: var(--mainColor2);
 }
+
+/* $$$$$ INÍCIO $$$$$ */
+.tittle-inicio {
+   color: var(--fontColor);
+   font-size: 32pt;
+   margin: 150px 0 150px;
+   display: flex;
+   position: relative;
+}
+
+.title-ball {
+   position: relative;
+}
+
+.title-o, .title-ter, .title-no {
+   width: 100px;
+   text-align: center;
+}
+.title-o::after,.title-ter::after, .title-no::after{
+   content: '';
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   top: 75px;
+   right: calc(50% - 25px);
+}
+
+.title-o::after {
+   background-color: #B13039;
+}
+.title-ter::after {
+   background-color: #114470;
+}
+.title-no::after {
+   background-color: #E98C23;
+}
+
+
 
 /* $$$$$ DISCOGRAFIA $$$$$ */
 
